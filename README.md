@@ -3,7 +3,7 @@ A youtube video summarizer using ChatGPT and Youtube APIs.
 Generate a short mp3 file of the summarized video in ANY languages with *only a [Youtube](youtube.com) link*
 
 ## Config file
-You have to create your own openAI api key [here](https://platform.openai.com/account/api-keys) and replace it in config.py file.
+You have to create your own OpenAI api key [here](https://platform.openai.com/account/api-keys) and replace it in config.py file.
 
 ## Run the code
 
