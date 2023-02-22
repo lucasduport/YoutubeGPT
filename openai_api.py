@@ -1,5 +1,6 @@
 import openai
 import config
+print(openai.__version__)
 
 openai.api_key = config.getConfig("open_ai_key")
 model = config.getConfig("model")

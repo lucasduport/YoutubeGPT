@@ -1,7 +1,7 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 import config
 
-
+print(YouTubeTranscriptApi.__version__)
 def getTranscript(video_id):
     transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=config.getConfig("languages"))
     return transcript
