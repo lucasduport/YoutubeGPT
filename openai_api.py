@@ -1,21 +1,33 @@
-import openai
 import config
-print(openai.__version__)
+from openai import OpenAI
 
-openai.api_key = config.getConfig("open_ai_key")
-model = config.getConfig("model")
-
-def use_chatGPT(prompt):
-        response = openai.Completion.create(
-        prompt=prompt,
-        model=model,
-        temperature=0.9,
-        max_tokens=600,
-        n=1)
-        return response.choices[0].text
+client = OpenAI(
+        api_key=config.getConfig('open_ai_key')
+)
 
 def summarize(to_summarize, output_language):
         prompt="This text is a piece of a youtube video script. Please summarize this\
-extract in less than 50 words. Fais en sorte que le resultat soit fluide quand les résumés de toutes les parties de la vidéos seront assemblées.\
-Ta réponse devra être en langue de codes de langue ISO 639-1: """ + output_language +".\n" + to_summarize
+extract in 1000 words maximum. The result muste be a fluid presentation that will be spoken.\
+You must answer in this language (ISO 639-1): """ + output_language +".\n" + to_summarize
         return use_chatGPT(prompt)
+
+
+def use_chatGPT(prompt):
+        response = client.chat.completions.create(
+        model=config.getConfig('text_model'),
+        messages=[
+        {"role": "system", "content": prompt}
+        ],
+        temperature=0.9,
+        n=1
+        )        
+        return response.choices[0].message.content
+
+def use_text_to_speech(text):
+        print("Asking wishper form openAI to read the text.")
+        response = client.audio.speech.create(
+        model=config.getConfig('audio_model'),
+        voice="alloy",
+        input=text
+        )
+        return response

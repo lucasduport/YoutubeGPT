@@ -1,7 +1,8 @@
 def getConfig(name):
     creds = dict()
-    creds['open_ai_key'] = "yourKet"
-    creds['model'] = "text-davinci-003" #You may want to change the model used here
+    creds['open_ai_key'] = "<your key>"
+    creds['text_model'] = "gpt-3.5-turbo" #You may want to change the model used here
+    creds['audio_model'] = "tts-1"
     creds['languages'] = ['en','af', 'ak', 'sq', 'am', 'ar', 'hy', 'as', 'ay', 'az', 'bn', 'eu', 'be', 'bho', 'bs', 'bg', 'my', 'ca', 'ceb', 
 'zh-Hans', 'zh-Hant', 'co', 'hr', 'cs', 'da', 'dv', 'nl', 'en', 'eo', 'et', 'ee', 'fil', 'fi', 'fr', 'gl', 'lg', 'ka', 'de', 'el', 
 'gn', 'gu', 'ht', 'ha', 'haw', 'iw', 'hi', 'hmn', 'hu', 'is', 'ig', 'id', 'ga', 'it', 'ja', 'jv', 'kn', 'kk', 'km', 'rw', 'ko', 

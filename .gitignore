@@ -1,5 +1,4 @@
-config.py
-output.mp3
+*.mp3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
