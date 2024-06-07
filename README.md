@@ -1,7 +1,7 @@
 # YoutubeGPT
 
 A youtube video summarizer using ChatGPT and Youtube APIs.
-Generate a short mp3 file of the summarized video in ANY languages with *only a [Youtube](youtube.com) link*
+**Generate a short mp3 file of the summarized video in ANY languages with a [Youtube](youtube.com) link**
 
 ## Config file
 You have to create your own OpenAI api key [here](https://platform.openai.com/account/api-keys) and replace it in `config.py` file.
@@ -16,7 +16,7 @@ You have to create your own OpenAI api key [here](https://platform.openai.com/ac
 
 `python3 main.py https://youtu.be/AyOnug-3OKM es out.mp3`
 
-Languages are given in format [IETF][(https://en.wikipedia.org/wiki/IETF_language_tag](https://en.wikipedia.org/wiki/IETF_language_tag))
+Languages are given in format [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag)
 
 ## Good to know
 
@@ -29,7 +29,8 @@ I should have use JSON to store config and import API key form shell envrionment
 I could take an optional parameter of how long the output file should be.
 
 ## Changelog:
-06/07/24: - Removed gTTS library usage to use openAI text to speech model.
-          - Now compatible with new version of openAI lib.
-          - You can now set an output file, if not, it will be name "output.mp3"
-          - Updated README
+- *06/07/24:*
+  - Removed gTTS library usage to use openAI text to speech model.
+  - Now compatible with new version of openAI lib.
+  - You can now set an output file, if not, it will be name "output.mp3"
+  - Updated README
