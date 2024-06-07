@@ -6,7 +6,10 @@ import openai_api as op
 def __main__():
     youtube_link = sys.argv[1]
     output_language = sys.argv[2]
-    output_filename = sys.argv[3]
+    if len(sys.argv) > 3:
+        output_filename = sys.argv[3]
+    else:
+        output_filename = "output.mp3"
 
     print("Extracting the video id from the youtube link.")
     video_id = yt.getVideoId(youtube_link)
