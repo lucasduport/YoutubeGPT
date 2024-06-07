@@ -7,8 +7,8 @@ client = OpenAI(
 
 def summarize(to_summarize, output_language):
         prompt="This text is a piece of a youtube video script. Please summarize this\
-extract in 1000 words maximum. The result muste be a fluid presentation that will be spoken.\
-You must answer in this language (ISO 639-1): """ + output_language +".\n" + to_summarize
+extract in 500 words maximum. The result muste be a fluid presentation that will be spoken.\
+You must answer in this language (IETF): """ + output_language +".\n" + to_summarize
         return use_chatGPT(prompt)
 
 
@@ -19,6 +19,7 @@ def use_chatGPT(prompt):
         {"role": "system", "content": prompt}
         ],
         temperature=0.9,
+        max_tokens=5000,
         n=1
         )        
         return response.choices[0].message.content

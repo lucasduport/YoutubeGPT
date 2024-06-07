@@ -26,6 +26,7 @@ No need to do it anymore thanks to massive gen ai improvements in less than a ye
 ## Improvements
 
 I should have use JSON to store config and import API key form shell envrionment variable. I will do it sometime.
+I could take an optional parameter of how long the output file should be.
 
 ## Changelog:
 06/07/24: - Removed gTTS library usage to use openAI text to speech model.
