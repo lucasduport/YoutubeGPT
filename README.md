@@ -1,4 +1,5 @@
 # YoutubeGPT
+
 A youtube video summarizer using ChatGPT and Youtube APIs.
 Generate a short mp3 file of the summarized video in ANY languages with *only a [Youtube](youtube.com) link*
 
@@ -17,10 +18,14 @@ You have to create your own OpenAI api key [here](https://platform.openai.com/ac
 
 Languages are given in format [IETF][(https://en.wikipedia.org/wiki/IETF_language_tag](https://en.wikipedia.org/wiki/IETF_language_tag))
 
-## Improvements
+## Good to know
+
 I used to split the transcript into several pieces because the context length of openAI api was not big enough to handle a whole video transcript.
-I did not change it yet, but I will sometime.
-I should have use JSON to store config and import API key form shell envrionment variable. Again, I will do it sometime.
+No need to do it anymore thanks to massive gen ai improvements in less than a year !!!
+
+## Improvements
+
+I should have use JSON to store config and import API key form shell envrionment variable. I will do it sometime.
 
 ## Changelog:
 06/07/24: - Removed gTTS library usage to use openAI text to speech model.
