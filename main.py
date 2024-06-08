@@ -22,7 +22,7 @@ def __main__():
 
     print(f"Asking {config.getConfig('audio_model')} to read the summary.")
     stream = op.use_text_to_speech(summary)
-    stream.with_streaming_response.method(output_filename)
+    stream.stream_to_file(output_filename)
 
 if __name__ == "__main__":
     __main__()

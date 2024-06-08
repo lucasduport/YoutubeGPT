@@ -12,8 +12,6 @@ def getTranscriptText(video_id):
     for line in transcript:
         content += line['text'] + " "
 
-    if len(content) == 0 or len(content) > maxNum:
-        raise Exception("Transcript is too long with length over " + str(maxNum) + " characters.")
     return content
 
 def getVideoId(youtube_link):

@@ -19,7 +19,7 @@ def use_chatGPT(prompt):
         {"role": "system", "content": prompt}
         ],
         temperature=0.9,
-        max_tokens=5000,
+        max_tokens=4096,
         n=1
         )        
         return response.choices[0].message.content
